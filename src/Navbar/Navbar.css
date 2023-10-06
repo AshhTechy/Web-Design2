@@ -1,0 +1,70 @@
+/* Navbar Container */
+/* Navbar Container */
+.navbar {
+    overflow: hidden;
+  display: flex;
+  justify-content: space-between; /* Align button to the end of the screen */
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #479ed8;
+  color: #fff;
+  padding: 10px 20px;
+  width: 100%; /* Make the navbar full-width */
+}
+
+.header{
+    color: #333333;
+}
+  /* Button Styling */
+  #navbar-button {
+    display: flex;
+    justify-content: end; /* Align button to the end of the screen */
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #navbar-button img {
+    width: 30px; /* Adjust the width of your button image */
+  }
+  
+  /* Navbar Contents (Initially Hidden) */
+  .navbar-contents {
+    display: none;
+    flex-direction: column; /* Stack the links vertically */
+    position: absolute; /* Position the menu absolutely */
+    top: 50px; /* Distance from the top of the button */
+    right: 20px; /* Distance from the right edge */
+    background-color: #fff; /* Background color for the contents */
+    border: 1px solid #ccc; /* Border for the contents */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Shadow for the contents */
+    z-index: 1; /* Ensure it appears above other content */
+    padding: 10px;
+  }
+  
+  /* Show the Navbar Contents when 'open' class is added */
+  .navbar-contents.open {
+    display: flex;
+  }
+  
+  /* Styling for Navigation Links */
+  .navbar-contents ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .navbar-contents li {
+    margin-bottom: 10px;
+  }
+  
+  .navbar-contents a {
+    color: #333; /* Link text color */
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth color transition on hover */
+  }
+  
+  .navbar-contents a:hover {
+    color: #007bff; /* Link text color on hover */
+  }
+  

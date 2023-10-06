@@ -1,24 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useEffect, useState } from "react";
+import React from "react";
 
+import Navbar from "./Navbar/Navbar";
+import { About } from "./Contents/About";
+import { Home } from "./Contents/Home";
+import { Footer } from "./Contents/Footer";
 function App() {
+  const [showButton, setShowButton] = useState(false);
+
+  // Function to handle scrolling and show/hide the button
+  const handleScroll = () => {
+    if (window.scrollY > 100) {
+      setShowButton(true);
+    } else {
+      setShowButton(false);
+    }
+  };
+
+  // Add a scroll event listener when the component mounts
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // Function to scroll to the top when the button is clicked
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <Home />
+      <About />
+      <Footer />
+      {showButton && (
+        <button className="scroll-top-button" onClick={scrollToTop}>
+          Scroll to Top
+        </button>
+      )}
+    </>
   );
 }
 

@@ -1,0 +1,48 @@
+.p-data {
+  width: 400px;
+  margin-left: 20%; /* Set your desired width */
+}
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Wrap rows to the next line when there's not enough space */
+    justify-content: space-between;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Each row takes the full width */
+    margin-bottom: 20px; /* Add some spacing between rows */
+  }
+  
+  .left,
+  .right {
+    width: 40%;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .left{
+    padding-left: 70px;
+  }
+
+  .right{
+    padding-right: 70px;
+    
+  }
+  /* Specific styling for <p> tags if needed */
+
+.more-btn{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    border-style: none;
+    color: #479ed8;
+    padding: 25px;
+}
+
+.center {
+    display: block; /* Make the button a block element */
+    margin: 0 auto; /* Center horizontally within its container */
+}
+  

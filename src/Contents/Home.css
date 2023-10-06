@@ -1,0 +1,22 @@
+.home-image{
+    width: 600px;
+    height: 400px;
+    padding-left: 25px;
+}
+
+.home-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Align button to the end of the screen */
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.home-p{
+    width: 400px;
+    display: flex;
+    justify-content: end; /* Align button to the end of the screen */
+    padding-right: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: #479ed8;
+}
